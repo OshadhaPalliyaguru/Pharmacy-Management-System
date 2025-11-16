@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.LoginController" xmlns:fx="http://javafx.com/fxml/1 ">
+    <center>
+        <AnchorPane prefHeight="515.0" prefWidth="873.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView layoutX="201.0" layoutY="-61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-61.0">
+                    <image>
+                        <Image url="@../images/loginbg.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="28.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Text>
+                <Text fill="#6f6e6e" layoutX="28.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO THE PMS">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+                <JFXTextField fx:id="name_txtField" layoutX="33.0" layoutY="311.0" prefHeight="25.0" prefWidth="271.0" />
+                <JFXTextField fx:id="password_txtField" layoutX="33.0" layoutY="392.0" prefHeight="25.0" prefWidth="271.0" />
+                <Text fill="#6f6e6e" layoutX="33.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text fill="#6f6e6e" layoutX="28.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Button fx:id="loginBtn" layoutX="30.0" layoutY="480.0" mnemonicParsing="false" onAction="#buttonLogin" prefHeight="25.0" prefWidth="279.0" style="-fx-background-color: #109CF1; -fx-background-radius: 50px;" text="Login In" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Text fill="#00c3ff" layoutX="209.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password ?">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
