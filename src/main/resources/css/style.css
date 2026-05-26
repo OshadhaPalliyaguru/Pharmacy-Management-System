@@ -1,0 +1,159 @@
+/* =========================================
+   1. GLOBAL & ROOT STYLES (The Foundation)
+   ========================================= */
+.root {
+    /* A very subtle, clean background color (Alice Blue) */
+    -fx-background-color: #f0f4f8;
+    -fx-font-family: "Segoe UI", "Poppins", sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* =========================================
+   2. SIDEBAR (The Main Navigation)
+   ========================================= */
+.sidebar {
+    /* A deep, elegant Royal Blue gradient */
+    -fx-background-color: linear-gradient(to bottom, #0d47a1, #1565c0);
+    -fx-background-radius: 0 25 25 0; /* Smooth curve on the right */
+    -fx-effect: dropshadow(three-pass-box, rgba(13, 71, 161, 0.3), 10, 0, 0, 0); /* Blue glowing shadow */
+    -fx-padding: 25;
+}
+
+/* Sidebar Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e3f2fd; /* Very light blue text */
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+    -fx-padding: 12 20;
+    -fx-background-radius: 12;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3; /* Invisible left border for hover effect */
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15); /* Glassy white effect */
+    -fx-text-fill: white;
+    -fx-border-color: #64b5f6; /* Light blue accent line on left */
+}
+
+/* =========================================
+   3. HEADER AREA
+   ========================================= */
+.header {
+    -fx-background-color: white;
+    -fx-alignment: center-left;
+    -fx-padding: 15 30;
+    -fx-background-radius: 0 0 0 20;
+    /* Very subtle shadow to separate header from body */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.header-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0d47a1; /* Matches sidebar dark blue */
+}
+
+/* =========================================
+   4. DASHBOARD CARDS (Clean & Modern)
+   ========================================= */
+.card {
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    /* Soft shadow for floating effect */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 4);
+}
+
+.card-label-title {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-opacity: 0.85;
+}
+
+.card-label-value {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Elegant Gradients - Staying within Blue/Cool tones */
+.card-blue   { -fx-background-color: linear-gradient(to right, #1e88e5, #42a5f5); } /* Ocean Blue */
+.card-orange { -fx-background-color: linear-gradient(to right, #fb8c00, #ffa726); } /* Warm Orange (Accent) */
+.card-green  { -fx-background-color: linear-gradient(to right, #43a047, #66bb6a); } /* Medical Green */
+.card-purple { -fx-background-color: linear-gradient(to right, #5e35b1, #7e57c2); } /* Deep Purple */
+
+/* =========================================
+   5. CHARTS & CONTAINERS
+   ========================================= */
+.chart-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 5, 0, 0, 2);
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #455a64; /* Blue-Grey text */
+}
+
+/* =========================================
+   6. TABLE VIEW (Professional White & Blue)
+   ========================================= */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+/* The Header Row */
+.table-view .column-header-background {
+    -fx-background-color: #e3f2fd; /* Very light blue background */
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-color: transparent transparent #bbdefb transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #1565c0; /* Dark Blue Text */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+}
+
+/* The Data Rows */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f1f1f1 transparent; /* Thin grey line between rows */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fafafa; /* Very subtle grey for alternate rows */
+}
+
+/* Hovering over a row */
+.table-row-cell:hover {
+    -fx-background-color: #e3f2fd; /* Light blue highlight on hover */
+}
+
+/* Selecting a row */
+.table-row-cell:selected {
+    -fx-background-color: #bbdefb; /* Soft blue selection */
+    -fx-text-fill: #0d47a1; /* Text stays dark blue for readability */
+}
+
+.table-cell {
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+    -fx-text-fill: #37474f; /* Dark Grey text */
+}
+
+/* =========================================
+   7. EXTRAS
+   ========================================= */
+.profile-container {
+    -fx-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+
+   <left>
+      <VBox prefHeight="720.0" prefWidth="260.0" spacing="10.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
+         </padding>
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="230.0">
+               <children>
+                  <Label text="PHARMACY" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="MANAGEMENT SYSTEM" textFill="#bbdefb">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </VBox>
+
+            <Button mnemonicParsing="false" onAction="#btnHomeOnAction" prefWidth="230.0" styleClass="nav-button" text="DASHBOARD" />
+            <Button mnemonicParsing="false" onAction="#btnMedicinesOnAction" prefWidth="230.0" styleClass="nav-button" text="MEDICINES" />
+            <Button mnemonicParsing="false" onAction="#btnBillingOnAction" prefWidth="230.0" styleClass="nav-button" text="BILLING &amp; POS" />
+            <Button mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefWidth="230.0" styleClass="nav-button" text="SUPPLIERS" />
+            <Button mnemonicParsing="false" onAction="#btnPurchaseOnAction" prefWidth="230.0" styleClass="nav-button" text="PURCHASES" />
+            <Button mnemonicParsing="false" onAction="#btnPurchaseItemOnAction" prefWidth="230.0" styleClass="nav-button" text="PURCHASE ITEMS" />
+            <Button mnemonicParsing="false" onAction="#btnSalesOnAction" prefWidth="230.0" styleClass="nav-button" text="SALES HISTORY" />
+            <Button mnemonicParsing="false" onAction="#btnSalesitemsOnAction" prefWidth="230.0" styleClass="nav-button" text="SALES DETAILS" />
+            <Button mnemonicParsing="false" onAction="#btnRegisterOnAction" prefWidth="230.0" styleClass="nav-button" text="USER MANAGEMENT" />
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button mnemonicParsing="false" onAction="#btnLogoutOnAction" prefWidth="230.0" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;" styleClass="nav-button" text="LOGOUT" />
+         </children>
+      </VBox>
+   </left>
+
+   <center>
+      <AnchorPane style="-fx-background-color: #f0f4f8;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="LoadMedicine" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </center>
+
+</BorderPane>

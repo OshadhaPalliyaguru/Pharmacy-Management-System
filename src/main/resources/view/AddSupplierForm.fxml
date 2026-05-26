@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: #f0f4f8;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddSupplierFormController">
+    <children>
+        <VBox spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 5);" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <padding>
+                <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+            </padding>
+            <children>
+                <VBox>
+                    <children>
+                        <Label text="Supplier Details" textFill="#0d47a1">
+                            <font>
+                                <Font name="Segoe UI Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label text="Register a new vendor" textFill="#78909c" />
+                    </children>
+                </VBox>
+                <Separator prefWidth="200.0" />
+
+                <GridPane hgap="15.0" vgap="15.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label style="-fx-font-weight: bold;" text="Supplier ID:" textFill="#37474f" />
+                        <TextField fx:id="txtid" promptText="Auto or Manual ID" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" />
+
+                        <Label style="-fx-font-weight: bold;" text="Company Name:" textFill="#37474f" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtname" onKeyReleased="#OnKeyReleased" promptText="Enter Name (Search)" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label style="-fx-font-weight: bold;" text="Phone Number:" textFill="#37474f" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtPhoneno" promptText="07X XXXXXXX" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label style="-fx-font-weight: bold;" text="Email Address:" textFill="#37474f" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtemail" promptText="supplier@company.com" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label style="-fx-font-weight: bold;" text="Address:" textFill="#37474f" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtaddress" promptText="City, Street" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label style="-fx-font-weight: bold;" text="Registered Date:" textFill="#37474f" GridPane.rowIndex="5" />
+                        <DatePicker fx:id="dpcreatedat" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    </children>
+                </GridPane>
+
+                <Separator prefWidth="200.0" />
+
+                <Label text="Linked Stock Update (Optional)" textFill="#78909c">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="txtMedicineId" promptText="Medicine ID" style="-fx-background-radius: 8;" />
+                        <TextField fx:id="txtQty" promptText="Quantity" style="-fx-background-radius: 8;" />
+                    </children>
+                </HBox>
+
+                <AnchorPane VBox.vgrow="ALWAYS" />
+
+                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #ef5350; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;" text="Delete" />
+                        <AnchorPane HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #cfd8dc; -fx-text-fill: #455a64; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;" text="Clear" />
+                        <Button mnemonicParsing="false" onAction="#btnEditOnAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffa726; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;" text="Update" />
+                        <Button mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1e88e5, #42a5f5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(30,136,229,0.4), 10, 0, 0, 4);" text="Save" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

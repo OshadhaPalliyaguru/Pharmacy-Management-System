@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #f0f4f8;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 5);" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
+         <padding>
+            <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+         </padding>
+         <children>
+            <Label text="Create New Account" textFill="#0d47a1">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Register a new staff member" textFill="#78909c">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+
+            <GridPane hgap="15.0" vgap="15.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Username:" textFill="#37474f" />
+                  <TextField fx:id="txtUserName" promptText="Enter Username" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" />
+
+                  <Label style="-fx-font-weight: bold;" text="Email:" textFill="#37474f" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtEmail" promptText="email@pharmacy.com" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                  <Label style="-fx-font-weight: bold;" text="Role:" textFill="#37474f" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbRole" maxWidth="1.7976931348623157E308" promptText="Select Role" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                  <Label style="-fx-font-weight: bold;" text="Password:" textFill="#37474f" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="txtpassword" promptText="Create Password" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                  <Label style="-fx-font-weight: bold;" text="Confirm:" textFill="#37474f" GridPane.rowIndex="4" />
+                  <PasswordField fx:id="txtCpassword" promptText="Confirm Password" style="-fx-background-radius: 8; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                  <Label style="-fx-font-weight: bold;" text="Join Date:" textFill="#37474f" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="dpcreatedat" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+
+            <Separator prefWidth="200.0" />
+
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnViewUsersOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #546e7a; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;" text="View Users" />
+                  <Button mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #1e88e5, #42a5f5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(30,136,229,0.4), 10, 0, 0, 4);" text="Register Now" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
